@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="botanicparkseoul">
+    <meta name="keywords" content="botanicpark, CSS, JavaScript">
+    <meta name="author" content="hyeonsong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botanicparkseoul</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Basic Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <!-- Filled Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <!-- Brand Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common_media.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/common.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="top">
+                <div class="inner">
+                    <p class="seoul_logo">
+                        <a href="https://www.seoul.go.kr/main/index.jsp">
+                            <img src="./img/logo1.png" alt="서울특별시 로고" />
+                        </a>
+                    </p>
+                    <ul class="top_links">
+                        <li><a href="https://www.seoul.go.kr/realmnews/in/list.do">서울소식</a></li>
+                        <li><a href="https://eungdapso.seoul.go.kr/">응답소</a></li>
+                        <li><a href="https://opengov.seoul.go.kr/">정보공개</a></li>
+                        <li><a href="https://news.seoul.go.kr/">분야별정보</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="inner">
+                    <p class="site_logo">
+                        <a href="#">
+                            <img src="./img/logo2.png" alt="서울식물원 로고" />
+                        </a>
+                    </p>
+                    <nav class="gnb" aria-label="주요 메뉴">
+                        <ul class="menu">
+                            <li class="menu_item">
+                                <a href="#">관람안내</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="#">관람안내</a>
+                                        <ul class="ter">
+                                            <li><a href="#">운영시간/휴관일</a></li>
+                                            <li><a href="#">요금안내</a></li>
+                                            <li><a href="#">연간회원제</a></li>
+                                            <li><a href="#">관람 시 유의사항/물품보관함</a></li>
+                                            <li><a href="#">관람 코스 안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">기타이용안내</a>
+                                        <ul class="ter">
+                                            <li><a href="#">촬영 신청</a></li>
+                                            <li><a href="#">행사·장소 사용신청</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">주요시설</a>
+                                        <ul class="ter">
+                                            <li><a href="#">편의시설</a></li>
+                                            <li><a href="#">어린이정원학교</a></li>
+                                            <li><a href="#">마곡문화관</a></li>
+                                            <li><a href="#">식물전문도서관</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li><!-- //.menu_item(관람안내) -->
+                            <li class="menu_item">
+                                <a href="#">오시는길</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="#">오시는길</a>
+                                        <ul class="ter">
+                                            <li><a href="#">대중교통</a></li>
+                                            <li><a href="#">자가용</a></li>
+                                            <li><a href="#">주차장/주변주차장</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li><!-- //.menu_item(오시는길) -->
+                            <li class="menu_item">
+                                <a href="#">전시프로그램</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="#">식물원</a>
+                                        <ul class="ter">
+                                            <li>
+                                                <a href="#">주제원</a>
+                                                <ul class="qua">
+                                                    <li><a href="#">온실</a></li>
+                                                    <li><a href="#">주제정원</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">공원</a>
+                                                <ul class="qua">
+                                                    <li><a href="#">열린숲</a></li>
+                                                    <li><a href="#">호수원</a></li>
+                                                    <li><a href="#">습지원</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">매력정원</a>
+                                                <ul class="qua">
+                                                    <li><a href="#">햇살정원</a></li>
+                                                    <li><a href="#">해봄정원</a></li>
+                                                    <li><a href="#">정원사의 정원</a></li>
+                                                    <li><a href="#">씨앗정원</a></li>
+                                                    <li><a href="#">입구정원</a></li>
+                                                    <li><a href="#">아이리스원정원</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">교육</a>
+                                        <ul class="ter">
+                                            <li><a href="#">교육</a></li>
+                                            <li><a href="#">교육신청</a></li>
+                                            <li><a href="#">투어신청</a></li>
+                                            <li><a href="#">교육자료실</a></li>
+                                            <li><a href="#">온라인교육</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">행사</a>
+                                        <ul class="ter">
+                                            <li><a href="#">문화행사/활동마당</a></li>
+                                            <li><a href="#">행사·공모전</a></li>
+                                            <li><a href="#">서울식물원식재설계공모전</a></li>
+                                            <li><a href="#">서울식물원국제심포지엄</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">체험</a>
+                                        <ul class="ter">
+                                            <li><a href="#">식물가꾸기</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li><!-- //.menu_item(전시프로그램) -->
+                            <li class="menu_item">
+                                <a href="#">소식정보</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="#">새소식</a>
+                                        <ul class="ter">
+                                            <li><a href="#">공지</a></li>
+                                            <li><a href="#">교육</a></li>
+                                            <li><a href="#">행사</a></li>
+                                            <li><a href="#">보도</a></li>
+                                        </ul><!-- //.ter(새소식) -->
+                                    </li>
+                                    <li>
+                                        <a href="#">채용·입찰</a>
+                                        <ul class="ter">
+                                            <li><a href="#">채용</a></li>
+                                            <li><a href="#">입찰</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">자료실</a></li>
+                                    <li><a href="#">자주하는 질문</a></li>
+                                    <li><a href="#">고객소리함/정보공유</a></li>
+                                </ul>
+                            </li><!-- //.menu_item(소식정보) -->
+                            <li class="menu_item">
+                                <a href="#">기관소개</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="#">식물원소개</a>
+                                        <ul class="ter">
+                                            <li><a href="#">인사말</a></li>
+                                            <li><a href="#">조성경과</a></li>
+                                            <li><a href="#">미션과비젼</a></li>
+                                            <li><a href="#">운영방향</a></li>
+                                            <li><a href="#">bi</a></li>
+                                            <li><a href="#">조직도</a></li>
+                                        </ul><!-- //.ter(식물원소개) -->
+                                    </li>
+                                    <li>
+                                        <a href="#">푸른수목원</a>
+                                        <ul class="ter">
+                                            <li><a href="#">공원소개</a></li>
+                                            <li><a href="#">이용안내(새소식)</a></li>
+                                            <li><a href="#">오시는길</a></li>
+                                            <li><a href="#">안내자료</a></li>
+                                            <li><a href="#">프로그램</a></li>
+                                            <li><a href="#">둘러보기</a></li>
+                                            <li><a href="#">식물이야기</a></li>
+                                        </ul><!-- //.ter(푸른수목원) -->
+                                    </li>
+                                </ul><!-- //.sub(기관소개) -->
+                            </li><!-- //.menu_item(기관소개) -->
+                        </ul>
+                    </nav>
+                    <div class="header_right">
+                        <div class="lang">
+                            <button type="button" class="lang_btn">
+                                <i class="bx bx-globe-alt-2"></i>
+                                <span>language</span>
+                            </button>
+                            <ul class="lang_list">
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">english</a></li>
+                                <li><a href="#">日本語</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="menu_btn" aria-label="메뉴">
+                            <i class="bx bx-menu"></i>
+                        </button>
+                    </div>
+                </div><!-- //.inner -->
+            </div><!-- //.bottom -->
+        </header>
+        <main class="container">
+            <!-- hero -->
+            <section class="hero">
+                <div class="inner">
+                    <div class="hero_box">
+                        <p class="hero_name">서울식물원</p>
+                        <h1>당신의 하루에 초록색 쉼표를</h1>
+                        <div class="hero_info">
+                            <div class="status_item">
+                                <span class="label">주차현황 :</span>
+                                <span class="value">보통</span>
+                                <span class="dot"></span>
+                            </div>
+                            <div class="line"></div>
+                            <div class="status_item">
+                                <span class="label">운영현황 :</span>
+                                <span class="value">정상운영</span>
+                                <span class="sub_text">현재 입장 가능</span>
+                            </div>
+                        </div><!-- //.hero_info -->
+                        <!-- 3컬럼 카드 영역 -->
+                        <div class="hero_cards">
+                            <!-- 운영시간 -->
+                            <a href="#">
+                                <div class="op_card">
+                                    <div class="op_head">
+                                        <i class="bx bx-alarm-alt"></i>
+                                        <div class="op_title">
+                                            <span class="op_title_main">운영 시간</span>
+                                            <span class="op_title_time">(09:30 - 18:00)</span>
+                                        </div><!-- //.op_title -->
+                                    </div><!-- //.op_head-->
+                                    <div class="op_status">
+                                        <span class="op_dot"></span>
+                                        <span class="op_status_text">오늘 운영 중</span>
+                                    </div><!-- //.op_status -->
+                                    <div class="op_foot">
+                                        <span class="op_item">• 16:00 입장 마감</span>
+                                        <span class="op_item">• 매주 월요일 휴관</span>
+                                    </div><!-- //.op_foot -->
+                                </div><!-- //.op_card -->
+                            </a>
+                            <!-- 요금안내 -->
+                            <a href="#">
+                                <div class="fee_card">
+                                    <div class="fee_head">
+                                        <i class="bx bx-ticket"></i>
+                                        <span class="fee_title">요금안내</span>
+                                    </div><!-- //.fee_head -->
+                                    <div class="fee_box">
+                                        <div class="fee">
+                                            <span class="fee_label">성인(19~64세)</span>
+                                            <span class="fee_price">5000원</span>
+                                        </div>
+                                        <div class="fee">
+                                            <span class="fee_label">청소년(13~18세)</span>
+                                            <span class="fee_price">3000원</span>
+                                        </div>
+                                        <div class="fee">
+                                            <span class="fee_label">어린이(06~12세)</span>
+                                            <span class="fee_price">2000원</span>
+                                        </div>
+                                    </div><!-- //.fee_box -->
+                                </div><!-- //.fee_card -->
+                            </a>
+                            <!-- 미니 2개 -->
+                            <div class="mini_stack">
+                                <a href="#">
+                                    <div class="mini_card" id="mini_card">
+                                        <div class="mini_head">
+                                            <i class="bx bx-group"></i>
+                                            <span class="mini_title">단체할인</span>
+                                        </div>
+                                        <div class="mini_box">
+                                            <span class="mini_text">30인 이상 30% 할인</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mini_card">
+                                    <div class="mini_head">
+                                        <i class="bx bx-leaf"></i>
+                                        <span class="mini_title">무료 개방 구역</span>
+                                    </div>
+                                    <div class="mini_box">
+                                        <span class="mini_text">열린숲,호수원,습지원</span>
+                                    </div>
+                                </div>
+                            </div><!-- //.mini_stack -->
+                        </div><!-- //.hero_cards -->
+                    </div><!-- //.hero_box -->
+                </div><!-- //.inner -->
+            </section><!-- //.hero-->
+            <!-- garden -->
+            <section class="garden">
+                <div class="inner">
+                    <div class="garden_wrap">
+                        <div class="garden_left">
+                            <p class="garden_sub">계절이 머무는 자리,</p>
+                            <h2 class="garden_title">오늘의 정원</h2>
+                            <h3 class="garden_name" id="garden_name"></h3>
+                            <p class="garden_place" id="garden_place"></p>
+                            <p class="garden_desc" id="garden_desc"></p>
+                            <div class="garden_controls">
+                                <button type="button" id="garden_prev" aria-label="이전">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18L9 12L15 6" stroke="#333" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button type="button" id="garden_next" aria-label="다음">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18L15 12L9 6" stroke="#333" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div><!-- //.garden_controls -->
+                            <button type="button" class="more_btn">
+                                <span>view more</span>
+                                <span class="circle">+</span>
+                            </button>
+                        </div><!-- //.garden_left -->
+                        <!--.garden_right는 js에서  -->
+                    </div><!-- //.garden_wrap -->
+                    <div class="garden_counter">
+                        <span class="count_cur">01</span>
+                        <span class="count_line"></span>
+                        <span class="count_total">11</span>
+                    </div>
+                </div><!-- //.inner -->
+            </section>
+            <!-- //.garden -->
+            <!-- course -->
+            <section class="course">
+                <div class="inner">
+                    <h4 class="course_title">
+                        <span>☘️</span>
+                        처음 방문이라면 이 코스로 시작하세요
+                    </h4>
+                    <div class="course_taps">
+                        <button class="course_tap" type="button" data_course="0">온실 중심 관람</button>
+                        <button class="course_tap" type="button" data_course="1">온실 + 야외 연계 관람</button>
+                        <button class="course_tap" type="button" data_course="2">온실 일부 관람</button>
+                        <button class="course_tap" type="button" data_course="3">야외 공간 중심 관람</button>
+                    </div><!-- //.course_taps -->
+
+                    <div class="course_box"><!-- 중간에 상자 -->
+                        <div class="course_info"><!-- 설명상자 -->
+                            <p class="box_title" id="box_title">온실 중심 관람</p>
+                            <p class="box_sub" id="box_sub">온실 랜드마크 집중 관람과 편의시설</p>
+                            <div class="amenities">
+                                <div class="amenities_tit">편의시설</div>
+                                <ul class="amenities_list" id="amenities_list">
+                                    <li><i class="fa-solid fa-baby-carriage"></i><span>식물문화센터 B1 유모차·휠체어 대여</span></li>
+                                    <li><i class="fa-solid fa-person-breastfeeding"></i><span>식물문화센터 1F 수유실 및 의무실</span>
+                                    </li>
+                                </ul>
+                            </div><!-- //.amenities -->
+                            <p class="time" id="course_time">관람 시간: 약 60분 ~ 90분</p>
+                            <a class="detail_btn" href="#">상세 동선 지도 보기<i class="fa-solid fa-angle-right"></i></a>
+                        </div><!-- //.course_info -->
+                        <div class="course_img" id="course_img"></div>
+                    </div><!-- //.course_box -->
+                    <div class="course_line" id="course_line"></div>
+                </div><!-- //.inner -->
+            </section>
+            <!-- //course -->
+            <!-- news -->
+            <section class="news" id="news">
+                <div class="inner">
+                    <h4 class="news_tit">식물원 소식 & 행사</h4>
+                    <p class="news_sub">놓치지 말아야 할 즐거움</p>
+                    <div class="news_con">
+                        <div class="poster1">
+                            <div class="poster1_img"></div>
+                            <span class="poster1_day">D-22</span>
+                            <div class="poster1_txt">2025 서울식물원 기획전</div>
+                        </div>
+                        <div class="poster2">
+                            <div class="poster2_img"></div>
+                            <span class="poster2_day">매주 토요일</span>
+                            <div class="poster2_txt">주말 상설 거리 공연 (버스킹)</div>
+                        </div>
+                        <div class="poster3">
+                            <div class="poster2_img"></div>
+                            <span class="poster2_day">매주 토요일</span>
+                            <div class="poster2_txt">주말 상설 거리 공연 (버스킹)</div>
+                        </div>
+                        <div class="notice">
+                            <div class="notice_top">
+                                <p>공지사항</p><a href="#" class="more_btn">더보기<i class="fa-regular fa-plus"></i></a>
+                            </div><!-- //.notice_top -->
+                            <ul class="notice_list">
+                                <li>
+                                    <span class="e_green">전시</span>
+                                    <div class="notice_title_wrap"><a href="#">
+                                            <p class="notice_title">기획전시 &lt;지구의 (다른) 거주자들&gt;</p>
+                                        </a>
+                                    </div>
+                                    <p class="notice_date">2026.02.22 까지</p>
+                                </li>
+                                <li>
+                                    <span class="e_orange">교육</span>
+                                    <div class="notice_title_wrap"><a href="#">
+                                            <p class="notice_title">겨울방학 특별 프로그램 &lt;반달돌칼:고대인의 농사 기구&gt;
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="notice_date">2026.02.25
+                                        까지</p>
+                                </li>
+                                <li>
+                                    <span class="e_orange">교육</span>
+                                    <div class="notice_title_wrap"><a href="#">
+                                            <p class="notice_title">어린이 체험 전시 &lt;When I Feel(내가 느낄 때)&gt;
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="notice_date">2026.02.27
+                                        까지</p>
+                                </li>
+                            </ul><!-- //.notice_list -->
+                        </div><!-- //.notice -->
+                    </div><!-- //.news_con -->
+                </div><!-- //.inner -->
+            </section>
+            <!-- //news -->
+            <!-- facility -->
+            <section class="facility" id="facility">
+                <div class="inner">
+                    <h2 class="facility_tit">시설안내</h2>
+                    <ul class="facility_list">
+                        <!-- item 1 -->
+                        <li class="facility_item"><!-- f1_식물클리닉-->
+                            <img class="facility_bg" src="img/facility1_bg.png" alt="식물클리닉 사진" />
+                            <h4 class="facility_name">
+                                식물클리닉
+                                <span class="facility_en">PLANT CLINIC</span>
+                            </h4>
+                            <div class="facility_box">
+                                <div class="facility_top">
+                                    <p class="facility_label"><span class="facility_icon">
+                                            <i class="fa-solid fa-truck-droplet"></i>
+                                        </span>식물클리닉</p>
+                                    <p class="facility_tags">
+                                        <span>반려식물</span><span>전문가진단</span><span>정원지원</span>
+                                    </p>
+                                </div>
+                                <p class="facility_desc">
+                                    식물 집사를 위한 식물 주치의가 기다립니다.
+                                    시들해진 반려 식물의 상태를 진단받고,
+                                    건강하게 키울 수 있는 전문가의 처방을 만나보세요
+                                </p>
+                                <ul class="facility_info">
+                                    <li><span class="info1">참가대상:</span><span class="finfo_txt">반려식물 관리에 어려움을 겪거나 도움이
+                                            필요한 시민 누구나 (서울시민 중심)</span></li>
+                                    <li><span class="info2">운영시간:</span><span class="finfo_txt">10:00 ~ 17:00 (점심시간
+                                            12:00 ~ 13:00 제외 / 매주 월요일 및 공휴일 휴관)</span>
+                                    </li>
+                                    <li><span class="info4">운영정보:</span><span class="finfo_txt">평식물문화센터 1층(정원지원실)
+                                            위치,이용료무료</span></li>
+                                </ul>
+                                <a href="#" class="facility_more">시설 안내<i class="fa-solid fa-angles-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="facility_item"><!-- f4_어린이-->
+                            <img class="facility_bg" src="img/facility4_bg.png" alt="어린이정원학교 사진" />
+                            <h4 class="facility_name">
+                                어린이정원학교
+                                <span class="facility_en">CHILDREN'S GARDEN SCHOOL</span>
+                            </h4>
+                            <div class="facility_box">
+                                <div class="facility_top">
+                                    <p class="facility_label"><span class="facility_icon">
+                                            <i class="fa-solid fa-child-reaching"></i>
+                                        </span>어린이정원학교</p>
+                                    <p class="facility_tags">
+                                        <span>생태감수성</span><span>어린이교육</span><span>가드닝체험
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <p class="facility_desc">
+                                    아이들의 고사리손으로 일구는 도심 속 작은 정원입니다. 흙을 만지고 식물을 심으며 자연과 더불어 살아가는 지혜를 오감으로 배웁니다.
+                                </p>
+                                <ul class="facility_info">
+                                    <li><span class="info1">참가대상:</span><span class="finfo_txt">유아 및 초등학생 (프로그램별 연령 상이)
+                                        </span></li>
+                                    <li><span class="info2">운영시간:</span><span class="finfo_txt">10:00 ~ 17:00 (프로그램 운영
+                                            시간에 따라 변동 가능)
+                                        </span>
+                                    </li>
+                                    <li><span class="info3">운영정보:</span><span class="finfo_txt">어린이정원학교(실외) 위치,
+                                            유료(프로그램별 상이, 사전 예약제)
+                                        </span></li>
+                                </ul>
+                                <a href="#" class="facility_more">자세히보기<i class="fa-solid fa-angles-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="facility_item"><!-- f3_식물도서관 -->
+                            <img class="facility_bg" src="img/facility3_bg.png" alt="식물전문도서관 사진" />
+                            <h4 class="facility_name">
+                                식물전문도서관
+                                <span class="facility_en">PLANT LIBRARY</span>
+                            </h4>
+                            <div class="facility_box">
+                                <div class="facility_top">
+                                    <p class="facility_label"><span class="facility_icon">
+                                            <i class="fa-solid fa-book"></i>
+                                        </span>식물전문도서관</p>
+                                    <p class="facility_tags">
+                                        <span>전문서적</span><span>열람공간</span><span>식물지식</span>
+                                    </p>
+                                </div>
+                                <p class="facility_desc">
+                                    7,000권의 초록빛 문장이 가득한 공간입니다. 식물과 조경에 관한 깊이 있는 전문 서적들을 자유롭게 탐독하며 나만의 정원을 구상해 보세요.
+                                </p>
+                                <ul class="facility_info">
+                                    <li><span class="info1">참가대상:</span><span class="finfo_txt">식물 및 조경에 관심 있는 시민 누구나
+                                        </span></li>
+                                    <li><span class="info2">운영시간:</span><span class="finfo_txt">10:00 ~ 18:00 (매주 월요일 및
+                                            공휴일 휴관)
+                                        </span>
+                                    </li>
+                                    <li><span class="info3">운영정보:</span><span class="finfo_txt">식물문화센터 2층 위치, 이용료 무료
+                                            (관내 열람)
+                                        </span></li>
+                                </ul>
+                                <a href="#" class="facility_more">시설 안내<i class="fa-solid fa-angles-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="facility_item"><!-- f2_씨앗도서관 -->
+                            <img class="facility_bg" src="img/facility2_bg.png" alt="씨앗도서관 사진" />
+                            <h4 class="facility_name">
+                                씨앗도서관
+                                <span class="facility_en">SEED LIBRARY</span>
+                            </h4>
+                            <div class="facility_box">
+                                <div class="facility_top">
+                                    <p class="facility_label"><span class="facility_icon">
+                                            <i class="fa-solid fa-seedling"></i>
+                                        </span>씨앗도서관</p>
+                                    <p class="facility_tags">
+                                        <span>씨앗대출</span><span>자율반납</span><span>식물문화</span>
+                                    </p>
+                                </div>
+                                <p class="facility_desc">
+                                    책처럼 씨앗을 빌려 드립니다. 씨앗 한 알을 심고 가꾸며 생명의 기록을 다시 반납하는 특별한 경험을 시작해 보세요.
+                                </p>
+                                <ul class="facility_info">
+                                    <li><span class="info1">참가대상:</span><span class="finfo_txt">씨앗을 재배할 의사가 있는 방문객 누구나
+                                        </span></li>
+                                    <li><span class="info2">운영시간:</span><span class="finfo_txt">10:00 ~ 17:00 (매주 월요일
+                                            휴관)
+                                        </span></li>
+                                    <li><span class="info3">운영정보:</span><span class="finfo_txt">식물문화센터 1층 위치, 이용료 무료
+                                        </span></li>
+                                </ul>
+                                <a href="#" class="facility_more">자세히보기<i class="fa-solid fa-angles-right"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //facility -->
+            <!-- faq -->
+            <section class="faq" id="faq">
+                <div class="inner">
+                    <h4 class="faq_tit">자주 묻는 질문(FAQ)</h4>
+                    <a href="#" class="faq_write">글쓰기</a>
+                    <ul class="faq_list">
+                        <li class="faq_all"><!-- q1 -->
+                            <button class="faq_q">
+                                <span>Q 강아지와 함께 산책할 수 있나요?</span>
+                                <i class="fa-solid fa-plus"></i></i>
+                            </button>
+                            <div class="faq_a">
+                                네, 야외 구역(열린숲, 호수원 등)은 목줄을 착용하면 가능합니다. 다만, 식물 보호를 위해 온실과 주제정원은 출입이 어려운 점 양해 부탁드려요.
+                            </div>
+                        </li>
+                        <li class="faq_all"><!-- q2 -->
+                            <button class="faq_q">
+                                <span>Q 월요일에도 관람이 가능한가요?</span>
+                                <i class="fa-solid fa-plus"></i></i>
+                            </button>
+                            <div class="faq_a">
+                                유료 구역인 온실과 주제정원은 매주 월요일에 쉬어갑니다. 하지만 탁 트인 공원 구역은 연중무휴 24시간 언제든 산책하실 수 있어요.
+                            </div>
+                        </li>
+                        <li class="faq_all"><!-- q3 -->
+                            <button class="faq_q">
+                                <span>Q 유모차나 휠체어를 빌릴 수 있나요?</span>
+                                <i class="fa-solid fa-plus"></i></i>
+                            </button>
+                            <div class="faq_a">
+                                네, 방문자센터와 온실 1층 안내데스크에서 무료로 대여해 드립니다. 선착순으로 운영되며, 유모차는 36개월 미만 아기들만 이용 가능합니다.
+                            </div>
+                        </li>
+                        <li class="faq_all"><!-- q4 -->
+                            <button class="faq_q">
+                                <span>Q 주차 요금과 할인 혜택이 궁금해요.</span>
+                                <i class="fa-solid fa-plus"></i></i>
+                            </button>
+                            <div class="faq_a">
+                                승용차 기준 10분당 200원입니다. 경차나 저공해 차량, 국가유공자 차량은 관련 조례에 따라 50%에서 최대 80%까지 알뜰하게 할인받으실 수 있어요.
+                            </div>
+                        </li>
+                        <li class="faq_all"><!-- q5 -->
+                            <button class="faq_q">
+                                <span>Q 무료 입장이나 할인 대상이 있나요?</span>
+                                <i class="fa-solid fa-plus"></i></i>
+                            </button>
+                            <div class="faq_a">
+                                6세 미만 영유아와 65세 이상 어르신, 장애인 및 국가유공자는 증빙서류 지참 시 무료입니다. 다둥이 행복카드 소지자도 30% 할인 혜택을 드리고 있어요.
+                            </div>
+                        </li>
+                    </ul>
+                </div><!-- //.inner -->
+            </section>
+            <!-- //faq -->
+            <!-- map -->
+            <section class="map" id="map">
+                <div class="inner">
+                    <div class="map_g">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.390668336665!2d126.83245027695209!3d37.569417423961156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9d01503c1eeb%3A0x947516d30347709a!2z7ISc7Jq47Iud66y87JuQ!5e0!3m2!1sko!2skr!4v1771724833739!5m2!1sko!2skr"
+                            width="1400" height="460" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map_bottom">
+                        <div class="map_info">
+                            <p><span class="map_txt">지번 주소 :</span>서울특별시 강서구 마곡동 812</p>
+                            <p><span class="map_txt">도로명 주소 :</span>서울특별시 강서구 마곡중앙로 161</p>
+                            <p><span class="map_txt">문의 전화 :</span>02-2104-9711 (대표번호)</p>
+                        </div>
+                        <div class="map_apps">
+                            <a class="map_app" id="naver" href="#">
+                                <img src="./img/icon/naver.png" alt="네이버 지도">
+                            </a>
+                            <a class="map_app" id="kakao" href="#">
+                                <img src="./img/icon/kakao.png" alt="카카오 지도">
+                            </a>
+                            <a href="#" class="parking_btn">
+                                <i class="fa-solid fa-square-parking"></i>
+                                <span class="parking_txt">주차장 안내</span>
+                            </a>
+                        </div><!-- //.map_apps -->
+                    </div>
+                </div><!-- //.inner -->
+            </section>
+            <!-- //map -->
+
+            <!-- mou -->
+            <section class="mou" id="mou">
+                <div class="inner">
+                    <div class="mou_controls"> <button id="mou_prev" class="mou_btn">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </button>
+                        <button id="mou_pause" class="mou_btn">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                        <button id="mou_next" class="mou_btn">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </button>
+                    </div>
+                    <div class="mou_slider" id="mou_slider">
+                        <div class="mou_track" id="mou_track">
+                            <img src="img/mou/logo1.png">
+                            <img src="img/mou/logo2.png">
+                            <img src="img/mou/logo3.png">
+                            <img src="img/mou/logo4.png">
+                            <img src="img/mou/logo5.png">
+                            <img src="img/mou/logo6.png">
+                            <img src="img/mou/logo7.png">
+                            <img src="img/mou/logo8.png">
+                            <img src="img/mou/logo9.png">
+                            <img src="img/mou/logo10.png">
+                            <!-- 무한루프를 위해 복사 -->
+                            <img src="img/mou/logo1.png">
+                            <img src="img/mou/logo2.png">
+                            <img src="img/mou/logo3.png">
+                            <img src="img/mou/logo4.png">
+                            <img src="img/mou/logo5.png">
+                            <img src="img/mou/logo6.png">
+                            <img src="img/mou/logo7.png">
+                            <img src="img/mou/logo8.png">
+                            <img src="img/mou/logo9.png">
+                            <img src="img/mou/logo10.png">
+                        </div>
+                    </div><!-- //.mou_slider -->
+            </section>
+            <!-- //mou -->
+        </main>
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="inner">
+                    <div class="top_left">
+                        <a href="https://www.seoul.go.kr/helper/copyright.do">저작권정책</a>
+                        <a href="#">영상정보처리기기 운영 관리방침</a>
+                        <a href="https://eungdapso.seoul.go.kr/gud/service/service_info.do">행정서비스 현장</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div><!-- //.top_left-->
+                    <div class="top_right">
+                        <a href="https://www.facebook.com/seoulbotanicpark"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/channel/UC2zrGJ4PxD4JHGkTJodWdSw"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/seoulbotanicpark_official/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div><!-- //.inner -->
+            </div><!-- //.footer_top -->
+            <div class="footer_bottom">
+                <div class="inner">
+                    <p class="b_txt1">(우) 07789 서울 강서구 마곡동로 161 서울식물원</p>
+                    <p class="b_txt2">Copyright©Seoul Metropolitan Government all rights reserved.</p>
+                </div>
+            </div><!-- //.footer_bottom -->
+        </footer>
+    </div>
+</body>
+
+</html>

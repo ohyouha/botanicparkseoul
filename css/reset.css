@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 1. 기본 여백 및 박스 크기 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. HTML5 시맨틱 태그 호환성 설정 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* 3. 텍스트 및 폰트 초기화 */
+body {
+    line-height: 1;
+    /* 추후에 필요하면 1.4~1.6으로 수정 */
+}
+
+/* 4.리스트 점 제거 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 5.따옴표 제거 */
+blockquote,
+q {
+    quotes: none;
+}
+
+/* 6.따옴표 제거 확인사살 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/* 7.기본적인 틈을 없앰 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 8.링크 및 폼 요소 초기화 */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* 9.!important:최우선 적용 */
+a:hover,
+a:focus,
+a:active {
+    cursor: pointer !important
+}
