@@ -30,7 +30,7 @@ body {
 .header {
     width: 100%;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -382,7 +382,7 @@ body {
 .hero {
     width: 100%;
     min-height: 100vh;
-    height: auto;
+    height: 100vh;
     position: relative;
     background-image: url("../img/mainhero.jpg");
     background-size: cover;
@@ -390,7 +390,8 @@ body {
     background-repeat: no-repeat;
     z-index: 1;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    padding-top: 155px;
 }
 
 .hero::before {
@@ -407,9 +408,9 @@ body {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding-top: 400px;
-    padding-bottom: 60px;
-    box-sizing: border-box;
+    /*     padding-top: 400px;
+    padding-bottom: 60px; */
+
 }
 
 .hero_box .hero_name {
@@ -1262,7 +1263,7 @@ body {
     margin-right: 80px;
 }
 
-.poster1_img{
+.poster1_img {
     width: 100%;
     height: 380px;
     background-image: url(../img/poster2.png);
@@ -1270,6 +1271,7 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
 }
+
 .poster2_img {
     width: 100%;
     height: 380px;
@@ -1713,8 +1715,17 @@ body {
 .faq_all {
     border-bottom: 1px solid #bababa;
     padding: 30px 0 0px 0;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    overflow: hidden;
+    transition: height .4s ease;
     /* margin: 0 160px; */
 
+}
+
+.faq_all.on {
+    height: 162px;
 }
 
 .faq_all:first-child {
@@ -1751,14 +1762,20 @@ body {
 
 /* 답변 기본 닫힘 */
 .faq_a {
-    height: 0;
+    /* height: 0; */
     overflow: hidden;
-    transition: height 0.4s ease;
+    /* transition: height 0.4s ease; */
     font-size: 18px;
     font-family: var(--font-ui);
-    line-height: 1;
+    line-height: 1.3;
     color: #3a3f3a;
     background: #fff;
+    padding: 20px 10px;
+    flex: 1;
+}
+
+.is_open .faq_a {
+    /* height: 78px; */
 }
 
 /* 열림 상태 */

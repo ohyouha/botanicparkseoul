@@ -362,68 +362,46 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener("resize", check);
     }
 
-    /* faq*/
+    /* faq */
     function initFaq() {
         const items = document.querySelectorAll(".faq_all");
         if (!items.length) return;
 
-        // 초기 닫힘
+        // 초기 상태: 전부 닫힘
         items.forEach((item) => {
-            const answer = item.querySelector(".faq_a");
+            item.classList.remove("on");
             const icon = item.querySelector(".faq_q i");
-            item.classList.remove("is_open");
-            if (answer) answer.style.height = "0px";
             if (icon) {
                 icon.classList.remove("fa-minus");
                 icon.classList.add("fa-plus");
             }
-        });
 
-        items.forEach((item) => {
-            const btn = item.querySelector(".faq_q");
-            const answer = item.querySelector(".faq_a");
-            const icon = item.querySelector(".faq_q i");
-            if (!btn || !answer || !icon) return;
+            item.addEventListener("click", function (e) {
+                // 이미 열려있으면 닫기
+                const isOpen = this.classList.contains("on");
 
-            btn.addEventListener("click", () => {
-                const isOpen = item.classList.contains("is_open");
-
-                // 다른 항목 닫기
+                // 전체 닫기
                 items.forEach((el) => {
-                    if (el === item) return;
-                    const a = el.querySelector(".faq_a");
+                    el.classList.remove("on");
                     const i = el.querySelector(".faq_q i");
-                    el.classList.remove("is_open");
-                    if (a) a.style.height = "0px";
                     if (i) {
                         i.classList.remove("fa-minus");
                         i.classList.add("fa-plus");
                     }
                 });
 
-                // 현재 항목 토글
+                // 클릭한 것만 열기
                 if (!isOpen) {
-                    item.classList.add("is_open");
-                    answer.style.height = answer.scrollHeight + "px";
-                    icon.classList.remove("fa-plus");
-                    icon.classList.add("fa-minus");
-                } else {
-                    item.classList.remove("is_open");
-                    answer.style.height = "0px";
-                    icon.classList.remove("fa-minus");
-                    icon.classList.add("fa-plus");
+                    this.classList.add("on");
+                    const icon = this.querySelector(".faq_q i");
+                    if (icon) {
+                        icon.classList.remove("fa-plus");
+                        icon.classList.add("fa-minus");
+                    }
                 }
             });
         });
-
-        // 리사이즈 시 열려있는 항목 높이 재계산
-        window.addEventListener("resize", () => {
-            document.querySelectorAll(".faq_all.is_open .faq_a").forEach((a) => {
-                a.style.height = a.scrollHeight + "px";
-            });
-        });
     }
-
     /* mou */
     function initMouGSAP() {
         const track = document.getElementById("mou_track");
