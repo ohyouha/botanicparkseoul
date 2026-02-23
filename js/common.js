@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 time: "관람 시간: 약 60분 ~ 90분",
                 img: "./img/course1.jpg",
-                route: "./img/route1.jpg"
+                route: "./img/route1.png"
             },
             {
                 title: "온실 + 야외 연계 관람",
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 time: "관람 시간: 약 120분 ~ 180분",
                 img: "./img/course2.jpg",
-                route: "./img/route2.jpg"
+                route: "./img/route2.png"
             },
             {
                 title: "온실 일부 관람",
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 time: "관람 시간: 약 60분",
                 img: "./img/course3.jpg",
-                route: "./img/route3.jpg"
+                route: "./img/route1.png"
             },
             {
                 title: "야외 공간 중심 관람",
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
                 time: "관람 시간: 약 90분 ~ 120분",
                 img: "./img/course4.jpg",
-                route: "./img/route4.jpg"
+                route: "./img/route3.png"
             }
         ];
 
@@ -335,7 +335,13 @@ document.addEventListener('DOMContentLoaded', () => {
         applyContent(0);
         setActiveTap(0);
     }
-
+    const taps = document.querySelectorAll(".course_tap");
+    const titleEl = document.getElementById("box_title");
+    const subEl = document.getElementById("box_sub");
+    const listEl = document.getElementById("amenities_list");
+    const timeEl = document.getElementById("course_time");
+    const imgEl = document.getElementById("course_img");
+    const routeEl = document.getElementById("course_line");
     /* 뉴스 */
     function initNewsOverflow() {
         const list = document.querySelector(".notice_list");

@@ -432,9 +432,10 @@ body {
     margin-bottom: 18px;
 }
 
-ㅑ .hero_info {
+.hero_info {
     margin-top: 22px;
     display: inline-flex;
+    flex-direction: row;
     align-items: center;
     gap: 24px;
     padding: 14px 32px;
@@ -1178,7 +1179,7 @@ body {
     margin-top: 80px;
     height: 100px;
     border-radius: 22px;
-    background: rgba(120, 150, 130, 0.28);
+    /* background: rgba(120, 150, 130, 0.28); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1877,7 +1878,7 @@ body {
 /* mou */
 .mou {
     padding: 30px 0;
-    background: #f5f6f5;
+    background: #ffffff;
 }
 
 .mou .inner {
@@ -1891,7 +1892,7 @@ body {
     flex-shrink: 0;
     display: flex;
     gap: 14px;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
 }
 
 .mou_controls button {
