@@ -1264,11 +1264,11 @@ body {
 
 .poster1_img,
 .poster2_img {
-    height: 380px;
-    background: #dfe5de;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 .poster1_day,
