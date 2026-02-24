@@ -11,30 +11,80 @@
     --font-sub: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1536px) {
+    .hero {
+        width: 100%;
+    }
+
+    .hero_box {
+        width: 100%;
+    }
+
     .op_card {
-        width: 500px;
+        flex: 1 1 460px;
+        max-width: 460px;
         height: 240px;
     }
 
     .fee_card {
-        flex: 0 0 400px;
-        /* ← 이거 추가 */
-        width: 400px;
+        flex: 1 1 360px;
+        max-width: 360px;
         height: 220px;
-        margin-left: 150px;
+    }
+
+    .mini_stack {
+        flex: 1 1 220px;
+        max-width: 220px;
     }
 
     .mini_card {
-        width: 250px;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
 
-    /* hero */
+    .course_info {
+        left: 80px;
+        max-width: 480px;
+    }
+
+    .course_img {
+        right: 80px;
+        max-width: 480px;
+    }
+
+    .news .inner {
+        padding: 0 60px;
+    }
+
+    .garden_left {
+        max-width: 480px;
+    }
+
+    .map_frame {
+        height: 400px;
+    }
+
+    .map_g iframe {
+        width: 100% !important;
+        height: 400px !important;
+    }
+
+    .map_bottom {
+        max-width: 100%;
+        padding: 0 24px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+
     .hero {
-        min-height: 70vh;
+        width: 100%;
+    }
+
+    .hero_box {
+        width: 100%;
     }
 
     .hero_box h2 {
@@ -46,22 +96,29 @@
     }
 
     .op_card {
-        width: 450px;
+        flex: 1 1 420px;
+        max-width: 420px;
         height: 240px;
     }
 
     .fee_card {
-        width: 340px;
+        flex: 1 1 320px;
+        max-width: 320px;
         height: 220px;
-        margin-left: 150px;
+        margin-left: 0;
+    }
+
+    .mini_stack {
+        flex: 1 1 200px;
+        max-width: 200px;
     }
 
     .mini_card {
-        width: 250px;
+        width: 100%;
     }
 
     .hero_cards {
-        gap: 16px;
+        gap: 12px;
     }
 
     .op_status_text {
@@ -76,7 +133,6 @@
         font-size: 18px;
     }
 
-    /* 정원 */
     .garden .inner {
         width: 90%;
     }
@@ -92,23 +148,27 @@
     /* 코스 */
 
     .course_box {
-        height: 460px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        padding: 30px;
+        gap: 24px;
     }
 
     .course_info {
-        left: 120px;
-        top: 50px;
-        width: 520px;
-        height: 350px;
-        z-index: 3;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: auto;
     }
 
     .course_img {
-        right: 120px;
-        top: 220px;
-        width: 520px;
-        height: 320px;
-        z-index: 5;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        height: 300px;
     }
 
     .course_line {
@@ -116,7 +176,6 @@
         margin-top: 60px;
     }
 
-    /*뉴스*/
     .notice {
         display: none;
     }
@@ -129,7 +188,8 @@
 
     .poster3 {
         display: block;
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: 450px;
         border-radius: 20px 20px 0 0;
         overflow: hidden;
@@ -182,7 +242,8 @@
 
     .poster1,
     .poster2 {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: auto;
     }
 
@@ -190,7 +251,6 @@
         padding: 0 24px;
     }
 
-    /*시설*/
     .facility_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -237,30 +297,529 @@
         margin-top: 50px;
     }
 
-    /* faq */
+
     .faq .inner {
         width: 80%;
     }
 
-    /* map */
+
     .map_g iframe {
         width: 100%;
     }
 
-    /* mou */
+
     .mou .inner {
         width: 95%;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
+    .course_img {
+        margin: 0 auto;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* ========== HERO 섹션 ========== */
+
+    /* hero 타이틀 */
+    .hero .hero_box h2 {
+        font-size: 48px;
+    }
+
+    /* ✅ 1. hero_cards - 넘침 방지 */
+    .hero .inner {
+        padding: 0 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero .hero_box .hero_cards {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* ✅ 2. op_card - 기준 너비 */
+    .hero .hero_box .hero_cards .op_card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 560px;
+        min-width: 0;
+        height: auto;
+        min-height: 240px;
+        margin: 0 auto;
+    }
+
+    /* op_card 내부 조정 */
+    .hero .hero_box .hero_cards .op_card .op_status {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero .hero_box .hero_cards .op_card .op_foot {
+        gap: 40px;
+    }
+
+    /* ✅ 2. all_card - op_card와 같은 너비 */
+    .hero .hero_box .hero_cards .all_card {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 0 auto;
+    }
+
+    /* ✅ 2. fee_card - all_card 너비에 맞춤 */
+    .hero .hero_box .hero_cards .all_card .fee_card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 215px;
+        padding: 24px;
+        grid-column: 1;
+        margin: 0;
+    }
+
+    .hero .hero_box .hero_cards .all_card .fee_card .fee_head {
+        width: 100%;
+    }
+
+    .hero .hero_box .hero_cards .all_card .fee_card .fee_box {
+        width: 100%;
+        max-width: 352px;
+        margin: 0 auto;
+    }
+
+    /* mini_stack 숨김 */
+    .hero .hero_box .hero_cards .all_card .mini_stack {
+        display: none;
+    }
+
+    /* hero_info */
+    .hero .hero_box .hero_info {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 12px 24px;
+    }
+
+    .hero .hero_box .hero_info .label,
+    .hero .hero_box .hero_info .value {
+        font-size: 18px;
+    }
+
+    /* ========== 정원 섹션 ========== */
+
+    /* ✅ 3. garden - 텍스트 완전히 왼쪽 정렬 */
+    .garden .inner {
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    .garden .garden_wrap {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .garden .garden_wrap .garden_left {
+        width: 90%;
+        max-width: 600px;
+        text-align: left;
+        align-items: flex-start;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .garden .garden_wrap .garden_left .garden_sub {
+        text-align: left;
+        width: 100%;
+    }
+
+    .garden .garden_wrap .garden_left .garden_tit {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .garden .garden_wrap .garden_left .garden_title {
+        font-size: 56px;
+        text-align: left;
+    }
+
+    .garden .garden_wrap .garden_left .garden_name,
+    .garden .garden_wrap .garden_left .garden_place,
+    .garden .garden_wrap .garden_left .garden_desc {
+        text-align: left;
+        width: 100%;
+    }
+
+    .garden .garden_wrap .garden_left .garden_controls {
+        justify-content: flex-start;
+    }
+
+    /* ========== 코스 섹션 ========== */
+
+    .course {
+        padding: 100px 0 80px;
+    }
+
+    .course .course_taps {
+        gap: 12px;
+    }
+
+    .course .course_taps .course_tap {
+        flex: 1 1 calc(50% - 6px);
+        font-size: 18px;
+        padding: 0 16px;
+    }
+
+    .course .course_box {
+        height: auto;
+        min-height: 400px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .course .course_box .course_info {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 24px;
+    }
+
+    .course .course_box .course_img {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+        order: -1;
+    }
+
+    .course .course_box .course_info .box_title {
+        font-size: 24px;
+    }
+
+    .course .course_box .course_info .box_sub {
+        font-size: 16px;
+    }
+
+    .course .course_box .course_info .amenities_tit {
+        font-size: 13px;
+    }
+
+    .course .course_box .course_info .amenities_list {
+        font-size: 13px;
+    }
+
+    .course .course_line {
+        height: 80px;
+        margin-top: 50px;
+    }
+
+    /* ========== 뉴스 섹션 ========== */
+
+    .news .news_tit {
+        font-size: 36px;
+    }
+
+    .news .news_sub {
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    .news .news_con {
+        justify-content: center;
+    }
+
+    /* ========== 시설 섹션 ========== */
+
+    .facility .facility_tit {
+        font-size: 38px;
+    }
+
+    .facility .facility_list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .facility .facility_list .facility_item {
+        height: 360px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1040px) {
+    .hero_box h2 {
+        font-size: 48px;
+    }
+
+    .hero_cards {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .op_card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .all_card {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .fee_card {
+        width: 100%;
+        height: auto;
+        min-height: 215px;
+    }
+
+    .mini_stack {
+        display: none;
+    }
+
+    .hero_info {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 12px 24px;
+    }
+
+    .hero_info .label,
+    .hero_info .value {
+        font-size: 18px;
+    }
+
+    /* 정원 */
+    .garden_left {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .garden_title {
+        font-size: 56px;
+    }
+
+    /* 코스 */
+    .course_tap {
+        flex: 1 1 calc(50% - 8px);
+        font-size: 20px;
+    }
+
+    /* 뉴스 */
+    .news_tit {
+        font-size: 36px;
+    }
+
+    .news_sub {
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    .news_con {
+        justify-content: center;
+    }
+
+    /* 시설 */
+    .facility_tit {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 768px) {
 
     /* hero */
     .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero_box h2 {
+        font-size: 42px;
+    }
+
+    .hero_box .hero_name {
+        font-size: 22px;
+    }
+
+    .hero_info {
+        display: none;
+    }
+
+    .hero_cards {
+        margin-top: 60px;
+    }
+
+
+    .garden {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .garden_title {
+        font-size: 48px;
+    }
+
+    .garden_name {
+        font-size: 26px;
+    }
+
+    .garden_place {
+        font-size: 18px;
+    }
+
+    .garden_desc {
+        font-size: 14px;
+    }
+
+
+    .course {
+        padding: 100px 0 80px;
+    }
+
+    .course_title {
+        font-size: 28px;
+    }
+
+    .course_taps {
+        flex-direction: column;
+    }
+
+    .course_tap {
+        width: 100%;
+        flex: 1 1 100%;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .course_box {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .course_img {
+        height: 250px;
+    }
+
+
+    .news {
+        padding: 80px 0 80px;
+    }
+
+    .news_tit {
+        font-size: 32px;
+    }
+
+    .news_sub {
+        margin-bottom: 40px;
+    }
+
+    .news_con {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster1,
+    .poster2,
+    .poster3 {
+        max-width: 100%;
+    }
+
+    .poster2 {
+        margin-right: 0;
+    }
+
+
+    .facility {
+        padding: 80px 0;
+    }
+
+    .facility_tit {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .facility_list {
+        grid-template-columns: 1fr;
+    }
+
+    .facility_item {
+        height: 400px;
+    }
+
+
+    .faq {
+        margin-top: 60px;
+        padding: 60px 0 40px 0;
+    }
+
+    .faq_tit {
+        font-size: 28px;
+    }
+
+    .faq_q {
+        font-size: 18px;
+    }
+
+    .faq_a {
+        font-size: 16px;
+    }
+
+
+    .map {
+        padding: 80px 0;
+    }
+
+    .map_frame {
+        height: 350px;
+    }
+
+    .map_bottom {
+        flex-direction: column;
+        padding: 0 16px;
+        margin-top: 40px;
+    }
+
+    .map_info p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+
+    .hero {
+        width: 100%;
         height: 120vh;
     }
 
-    .hero_box h1 {
+    .hero_box {
+        width: 100%;
+    }
+
+    .hero_box h2 {
         font-size: 32px;
     }
 
@@ -275,7 +834,6 @@
     .hero_info {
         padding: 10px 16px;
         gap: 12px;
-
     }
 
     .hero_info .label,
@@ -296,32 +854,34 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
-    }
-
-    .fee_head {
-        margin-left: 40px;
+        width: 100%;
+        height: 240px;
     }
 
     .fee_title {
         font-size: 28px;
     }
 
-     .op_card
-     {
-        width: 360px;
+    .op_card {
+        width: 100%;
         height: 240px;
     }
 
-    .fee_card {
-        width: 360px;
-        height: 240px;
+    .op_foot {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .op_status {
+        width: 100%;
+        max-width: 100%;
     }
 
     .mini_stack {
         display: none;
     }
 
-    /* 정원 */
+
     .garden {
         align-items: flex-start;
         height: 120vh;
@@ -345,7 +905,7 @@
         display: none;
     }
 
-    /* 코스 */
+
     .course {
         padding: 70px 0 60px;
     }
@@ -358,7 +918,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
-
     }
 
     .course_tap {
@@ -382,15 +941,6 @@
     }
 
     .course_img {
-        /* position: relative;
-        top: auto;
-        right: auto;
-        width: 100%;
-        height: 200px;
-        border-radius: 16px;
-        background: rgba(120, 150, 130, 0.25);
-        z-index: 1;
-        flex-shrink: 0; */
         display: none;
     }
 
@@ -426,7 +976,6 @@
         font-size: 12px;
     }
 
-    /* 버튼 */
     .detail_btn {
         height: 38px;
         font-size: 13px;
@@ -437,7 +986,7 @@
         display: none;
     }
 
-    /* 뉴스 */
+
     .news {
         padding: 50px 0 30px;
     }
@@ -454,7 +1003,6 @@
 
     .notice {
         display: block;
-        /* 공지사항 살리기 */
         width: 100%;
         height: 60vh;
     }
@@ -464,7 +1012,6 @@
     }
 
 
-    /* 시설 - 1열 */
     .facility_list {
         grid-template-columns: 1fr;
     }
@@ -489,7 +1036,7 @@
         top: 28px;
     }
 
-    /* faq */
+
     .faq {
         margin: 20px 0 0;
     }
@@ -506,7 +1053,7 @@
         height: 220px;
     }
 
-    /* map */
+
     .map {
         padding: 100px 0 100px;
     }
@@ -531,9 +1078,6 @@
         margin-top: 20px;
     }
 
-
-
-    /* mou */
     .mou .inner {
         flex-direction: column;
         gap: 12px;
@@ -542,5 +1086,20 @@
     .mou_controls {
         display: none;
     }
+}
 
+@media screen and (max-width: 375px) {
+
+    .op_title_main,
+    .op_title_time {
+        font-size: 20px;
+    }
+
+    .op_status_text {
+        font-size: 28px;
+    }
+
+    .op_item {
+        font-size: 14px;
+    }
 }

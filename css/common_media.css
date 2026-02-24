@@ -11,9 +11,49 @@
     --font-sub: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
     .header .gnb>.menu {
-        gap: 30px;
+        gap: 28px;
+    }
+
+    .header .gnb>.menu>.menu_item>a {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 1320px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .inner {
+        width: 100%;
+    }
+
+    .header .bottom {
+        overflow: hidden;
+    }
+
+    .header .gnb>.menu {
+        gap: 16px;
+    }
+
+    .header .gnb>.menu>.menu_item>a {
+        font-size: 16px;
+    }
+
+    .header .lang_btn {
+        font-size: 16px;
+    }
+
+    .seoul_logo img {
+        height: 38px;
+    }
+
+    .site_logo img {
+        height: 24px;
     }
 
     /* footer */
@@ -26,9 +66,107 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .header .top_links {
+        gap: 20px;
+        font-size: 12px;
+    }
+
+    .header .gnb>.menu {
+        gap: 24px;
+    }
+
+    .header .gnb>.menu>.menu_item>a {
+        font-size: 18px;
+    }
+
+    .header .lang_btn {
+        font-size: 18px;
+    }
+
+    .site_logo img {
+        height: 40px;
+    }
+
+    /* footer */
+    .footer_top .inner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .top_left {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    .top_right {
+        gap: 40px;
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header .top_links {
+        gap: 16px;
+        font-size: 11px;
+    }
+
+    .header .bottom {
+        height: 80px;
+    }
+
+    .header .gnb>.menu {
+        gap: 16px;
+    }
+
+    .header .gnb>.menu>.menu_item>a {
+        font-size: 16px;
+    }
+
+    .site_logo img {
+        height: 35px;
+    }
+
+    .header .lang_btn {
+        font-size: 16px;
+    }
+
+    /* footer */
+    .top_left {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    .top_right {
+        gap: 35px;
+        font-size: 28px;
+    }
+
+    .footer_bottom .inner {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .b_txt1 {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    * {
+        outline: 1px solid rgba(113, 103, 255, 0.15);
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 
     .inner {
+        width: 100%;
         padding: 0 16px;
     }
 
