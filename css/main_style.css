@@ -723,6 +723,7 @@
     border: 1px solid rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(10px);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    letter-spacing: -0.3px;
 }
 
 .box_title {
@@ -796,7 +797,7 @@
     text-decoration: none;
     font-size: 14px;
     font-family: var(--font-sub);
-    font-weight: 600;
+    font-weight: 400;
     box-shadow: 0 12px 24px rgba(47, 111, 63, 0.25);
     transition: filter 0.2s ease;
 }
@@ -882,6 +883,7 @@
     font-family: var(--font-sub);
     font-weight: 400;
     color: #173D22;
+    margin-top: 15px;
 }
 
 /* 포스터 */
@@ -1000,7 +1002,11 @@
     margin: 0;
     padding: 0;
 }
-
+.notice_list .notice_title{
+    font-size: 16px;
+    font-family: var(--font-sub);
+    font-weight: 500;
+}
 .notice_list li {
     display: grid;
     grid-template-columns: 60px 1fr;
@@ -1021,8 +1027,13 @@
     border-radius: 9999px;
     font-size: 12px;
     font-family: var(--font-ui);
-    font-weight: 00;
+    font-weight: 300;
     color: #fff;
+}
+.notice_list p.notice_date{
+  font-size: 13px;
+  font-family: var(--font-sub);
+  font-weight: 400;
 }
 
 /* 알약 색 */

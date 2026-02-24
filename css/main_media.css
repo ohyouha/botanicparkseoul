@@ -285,7 +285,8 @@
 
     .hero_cards {
         flex-direction: column;
-        align-items: stretch;
+        justify-content: center;
+        align-items: center;
         margin-top: 40px;
         gap: 12px;
     }
@@ -305,9 +306,14 @@
         font-size: 28px;
     }
 
-    .op_card,
+     .op_card
+     {
+        width: 360px;
+        height: 240px;
+    }
+
     .fee_card {
-        width: 100%;
+        width: 360px;
         height: 240px;
     }
 
