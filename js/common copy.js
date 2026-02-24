@@ -3,7 +3,12 @@ if (window.gsap && window.ScrollTrigger) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    /* ── GNB 4depth 화살표 ── */
+    document.querySelectorAll('.header .gnb .ter > li').forEach(li => {
+        if (li.querySelector(':scope > .qua')) {
+            li.classList.add('has_depth');
+        }
+    }); 
     /* 정원*/
     function initGarden() {
         const section = document.querySelector('.garden');
