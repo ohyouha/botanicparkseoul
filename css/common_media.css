@@ -12,15 +12,6 @@
 }
 
 @media screen and (max-width: 1280px) {
-    body {
-        border-top: 5px solid red;
-        /* 1280px 진입 시 상단에 빨간 선 등장 */
-    }
-
-    .inner {
-        max-width: 1500px;
-    }
-
     .header .gnb>.menu {
         gap: 30px;
     }
@@ -36,14 +27,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        border-top: 5px solid rgb(43, 87, 232);
-        /* 1280px 진입 시 상단에 빨간 선 등장 */
-    }
-
-    .inner {
-        padding: 0 16px;
-    }
 
     .inner {
         padding: 0 16px;

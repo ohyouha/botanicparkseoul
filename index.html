@@ -37,7 +37,7 @@
                 <div class="inner">
                     <p class="seoul_logo">
                         <a href="https://www.seoul.go.kr/main/index.jsp">
-                            <img src="./img/logo1.png" alt="서울특별시 로고" />
+                            <img src="./img/logo1.png" alt="" />
                         </a>
                     </p>
                     <ul class="top_links">
@@ -52,7 +52,7 @@
                 <div class="inner">
                     <h1 class="site_logo">
                         <a href="#">
-                            <img src="./img/logo2.png" alt="서울식물원 로고" />
+                            <img src="./img/logo2.png" alt="" />
                         </a>
                     </h1>
                     <nav class="gnb" aria-label="주요 메뉴">
@@ -333,7 +333,11 @@
                     <div class="garden_wrap">
                         <div class="garden_left">
                             <p class="garden_sub">계절이 머무는 자리,</p>
-                            <h2 class="garden_title">오늘의 정원</h2>
+                            <div class="garden_tit"><h3 class="garden_title">오늘의 정원</h3>
+                            <button type="button" class="more_btn">
+                            <span>view more</span>
+                            <span class="circle">+</span>
+                            </button></div>
                             <h3 class="garden_name" id="garden_name"></h3>
                             <p class="garden_place" id="garden_place"></p>
                             <p class="garden_desc" id="garden_desc"></p>
@@ -351,10 +355,7 @@
                                     </svg>
                                 </button>
                             </div><!-- //.garden_controls -->
-                            <button type="button" class="more_btn">
-                                <span>view more</span>
-                                <span class="circle">+</span>
-                            </button>
+
                         </div><!-- //.garden_left -->
                         <!--.garden_right는 js에서  -->
                     </div><!-- //.garden_wrap -->

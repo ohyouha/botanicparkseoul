@@ -58,12 +58,11 @@ body {
 }
 
 .header .seoul_logo a {
-    display: inline-flex;
-    align-items: center;
     width: 180px;
     height: 40px;
-    background: rgb(228, 170, 170);
-    /* 임시 */
+}
+.seoul_logo img{
+    height: 30px;
 }
 
 .header .top_links {
@@ -113,11 +112,10 @@ body {
     flex-shrink: 0;
     width: 200px;
     height: 60px;
-    background: rgb(202, 119, 119);
-    /* 임시 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.site_logo img{
+    height: 55px;
 }
 
 /* gnb */
