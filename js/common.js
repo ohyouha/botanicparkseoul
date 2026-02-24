@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!section) return;
 
         const gardenData = [
-            { name: '수련', place: '주제정원', desc: '한국의 정원 문화와 식물의 아름다움을\n테마별로 담아낸 공간입니다.', color: '#5a8a6a' },
+            { name: '수련', place: '주제정원', desc: '한국의 정원 문화와 식물의 아름다움을\n테마별로 담아낸 공간입니다.', color: '#5a8a6a', img: './img/garden1.jpg' },
             { name: '느티나무', place: '열린숲', desc: '드넓은 잔디마당과 나무들 사이에서\n누구나 편히 쉴 수 있는 식물원의 입구입니다.', color: '#3d6e4d' },
             { name: '꽃창포', place: '호수원', desc: '수변 산책로를 따라 흐르는 물결과\n식물의 조화를 느낄 수 있는 휴식처입니다.', color: '#4a6fa8' },
             { name: '낙우송', place: '습지원', desc: '자연 그대로의 습지 생태계를 보존하여\n생물의 다양성을 관찰할 수 있는 구역입니다.', color: '#4a7a6a' },
@@ -110,7 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
             el.className = 'g-item';
             const inner = document.createElement('div');
             inner.className = 'g-inner';
-            inner.style.background = d.color;
+            if (d.img) {
+                inner.style.backgroundImage = `url("${d.img}")`;
+                inner.style.backgroundSize = 'cover';
+                inner.style.backgroundPosition = 'center';
+            } else {
+                inner.style.background = d.color;
+            }
             inner.textContent = d.name;
             el.appendChild(inner);
 
@@ -181,9 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         prevBtn?.addEventListener('click', () => { prev(); pauseAndResume(); });
         nextBtn?.addEventListener('click', () => { next(); pauseAndResume(); });
-
+        /* 도는 시간 조절 */
         let autoTimer = null, resumeTimer = null;
-        const startAuto = () => { stopAuto(); autoTimer = setInterval(next, 4000); };
+        const startAuto = () => { stopAuto(); autoTimer = setInterval(next, 3000); };
         const stopAuto = () => clearInterval(autoTimer);
 
         function pauseAndResume() {
@@ -425,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const tl = gsap.timeline({ repeat: -1 });
         tl.to(track, {
             x: () => -loopDistance,
-            duration: 18,          // 속도(작을수록 빠름)
+            duration: 80,          // 속도(작을수록 빠름)
             ease: "none"
         });
 
@@ -474,10 +480,55 @@ document.addEventListener('DOMContentLoaded', () => {
             isPaused = !isPaused;
         });
     }
+    function initHeaderScroll() {
+        if (!window.gsap || !window.ScrollTrigger) return;
+
+        const header = document.querySelector('.header');
+        const headerTop = document.querySelector('.header_top');
+
+        ScrollTrigger.create({
+            trigger: '.garden',
+            start: 'top 95px',
+            onEnter: () => {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(12px)';
+                header.style.borderBottom = '1px solid rgba(0,0,0,0.08)';
+
+                document.querySelectorAll('.gnb .menu_item > a').forEach(a => {
+                    a.style.color = '#1a3a24';
+                });
+                document.querySelectorAll('.lang_btn, .header_right').forEach(el => {
+                    el.style.color = '#1a3a24';
+                });
+                document.querySelectorAll('.top_links a').forEach(a => {
+                    a.style.color = '#1a3a24';
+                });
+
+                if (headerTop) headerTop.style.display = 'none';
+            },
+            onLeaveBack: () => {
+                header.style.background = 'rgba(255, 255, 255, 0.07)';
+                header.style.backdropFilter = 'blur(0.7px)';
+                header.style.borderBottom = '1px solid transparent';
+
+                document.querySelectorAll('.gnb .menu_item > a').forEach(a => {
+                    a.style.color = 'rgba(255,255,255,0.9)';
+                });
+                document.querySelectorAll('.lang_btn, .header_right').forEach(el => {
+                    el.style.color = '#fff';
+                });
+                document.querySelectorAll('.top_links a').forEach(a => {
+                    a.style.color = 'rgba(255,255,255,0.85)';
+                });
+
+                if (headerTop) headerTop.style.display = '';
+            }
+        });
+    }
     try { initGarden(); } catch (e) { console.error("initGarden error", e); }
     try { initCourse(); } catch (e) { console.error("initCourse error", e); }
     try { initNewsOverflow(); } catch (e) { console.error("initNewsOverflow error", e); }
     try { initFaq(); } catch (e) { console.error("initFaq error", e); }
     try { initMouGSAP(); } catch (e) { console.error("initMouGSAP error", e); }
-
+    try { initHeaderScroll(); } catch (e) { console.error("initHeaderScroll error", e); }
 });/* DOM end */
