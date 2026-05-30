@@ -268,7 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
-        if (!taps.length || !titleEl || !subEl || !listEl || !timeEl || !imgEl || !routeEl) {
+        if (!taps.length) return;
+
+        if (!titleEl || !subEl || !listEl || !timeEl || !imgEl || !routeEl) {
             console.warn("[course] 필요한 요소를 찾지 못했습니다.");
             return;
         }
